@@ -7,10 +7,10 @@ export class UpdateProdutoController {
   async handle(req: Request, res: Response): Promise<Response> {
     try {
       
-      const { id, ...dadosProduto } = req.body;
+      const { idProduto, preco, estado, nome } = req.body;
 
       // Chamando o serviço para atualizar o produto
-      const produto = await this.updateProdutoService.execute(id, dadosProduto);
+      const produto = await this.updateProdutoService.execute(id, preco, estado, nome );
 
       // Retornando o resultado
       return res.json(produto);
