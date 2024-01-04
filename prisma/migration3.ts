@@ -1,0 +1,1 @@
+ALTER TABLE `tbitemvenda` ADD COLUMN `preco` DOUBLE NOT NULL;
